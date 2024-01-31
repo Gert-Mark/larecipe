@@ -19,6 +19,10 @@ class SearchController extends Controller
     {
         $this->documentationRepository = $documentationRepository;
 
+        if (config('larecipe.settings.guard')) {
+            Auth::shouldUse(config('larecipe.settings.guard'));
+        }
+        
         if (config('larecipe.settings.auth')) {
             $this->middleware(['auth']);
         }else{
