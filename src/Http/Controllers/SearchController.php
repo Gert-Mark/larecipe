@@ -3,6 +3,7 @@
 namespace BinaryTorch\LaRecipe\Http\Controllers;
 
 use BinaryTorch\LaRecipe\DocumentationRepository;
+use Illuminate\Support\Facades\Auth;
 
 class SearchController extends Controller
 {
